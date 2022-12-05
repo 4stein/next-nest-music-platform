@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  next-app:
+    image: next-app
+    stdin_open: true
+    ports: 
+      - "3000:3000"
+    networks:
+      - music-app
+  nest-api:
+    image: nest-api
+    ports:
+      - "5000:5000"
+    networks:
+      - music-app
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - music-app
+    volumes:
+      - mongo-data:/data/db
+networks:
+  music-app:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local

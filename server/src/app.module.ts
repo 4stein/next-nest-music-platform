@@ -11,7 +11,7 @@ import { TrackModule } from './track/track.module';
     ServeStaticModule.forRoot({
       rootPath: path.resolve(__dirname, 'static')
     }),
-    MongooseModule.forRoot('mongodb://localhost/music'), 
+    MongooseModule.forRoot('mongodb://mongodb:27017/music'), 
     TrackModule,
     FileModule
   ],
