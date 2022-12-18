@@ -1,4 +1,4 @@
-# Fullstack next nest music platform app
+# Fullstack next nest with docker music platform app
 
 Next, Next-Redux-Wrapper, Redux-Toolkit, Redux-Thunk, TypeScript, Nest, MongoDB, Docker
 
